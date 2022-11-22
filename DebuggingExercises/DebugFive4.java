@@ -3,28 +3,33 @@
 import javax.swing.*;
 public class DebugFive4
 {
-   public static void main (String args[]) 
+   public static void main (String []args)
    {
-      int one, two, three, four;
-      String str, output;
+      int one;
+      int two;
+      int three;
+      int four;
+      String str;
+      String output;
+
       str = JOptionPane.showInputDialog(null,"Enter an integer");
-      one = Integer.parseInt();
+      one = Integer.parseInt(str);
       str = JOptionPane.showInputDialog(null,"Enter an integer");
-      two = Integer.parseInt();
+      two = Integer.parseInt(str);
       str = JOptionPane.showInputDialog(null,"Enter an integer");
-      two = Integer.parseInt();
+      three = Integer.parseInt(str);
       str = JOptionPane.showInputDialog(null,"Enter an integer");
-      four = Integer.parseInt();
-      if(one > two & one >= three && one < four)
-         output = "Highest is " + one;
+      four = Integer.parseInt(str);
+      if(four >= two & four >= three && four >= one)
+         output = "Highest is " + four;
       else
-         if(two > one || two > three && two > four)
+         if(two >= one && two >= three)
             output = "Highest is " + two;
          else
-           if(three > one && three > two || three == four)
+           if(three >= one)
               output = "Highest is " + three;
            else
-              output = "Highest is " + three;
+              output = "Highest is " + one;
       JOptionPane.showMessageDialog(null, output);
    }
 }
